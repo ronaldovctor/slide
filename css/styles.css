@@ -1,1 +1,27 @@
-/*# sourceMappingURL=styles.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+}
+.slide-wrapper .slide {
+  display: flex;
+}
+.slide-wrapper .slide li {
+  width: 80vw;
+  flex-shrink: 0;
+  max-width: 800px;
+  margin: 0 20px;
+}/*# sourceMappingURL=styles.css.map */
