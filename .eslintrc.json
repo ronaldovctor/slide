@@ -1,0 +1,30 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["airbnb-base", "prettier"],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "no-console":"off",
+        "semi":"off",
+        "no-param-reassign":"off",
+        "no-use-before-define":"off",
+        "import/extensions": 0,
+        "no-unused-expressions": [
+            "error",
+            {
+                "allowTernary": true,
+                "allowShortCircuit": true
+            }
+        ]
+    },
+    "ignorePatterns": [
+        "**/*.html"
+    ]
+}
