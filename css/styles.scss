@@ -42,4 +42,28 @@ img {
 			}
 		}
 	}
+
+	[data-control='slide'] {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5rem;
+
+		li {
+			a {
+				display: block;
+				width: 12px;
+				height: 12px;
+				background-color: #fb5;
+				border-radius: 50%;
+				overflow: hidden;
+				text-indent: -999px;
+				margin: 5px;
+			}
+
+			&.active a,
+			&:hover a {
+				background: #e54;
+			}
+		}
+	}
 }
