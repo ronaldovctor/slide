@@ -102,10 +102,10 @@ export default class Slide {
 		this.moveSlide(activeSlide.position)
 		this.dist.finalPosition = activeSlide.position
 		this.slidesIndexNav(index)
-		this.changeActivClass()
+		this.changeActiveClass()
 	}
 
-	changeActivClass() {
+	changeActiveClass() {
 		this.slideArray.forEach((item) => {
 			item.element.classList.remove(this.activeClass)
 		})
@@ -136,13 +136,15 @@ export default class Slide {
 		this.onEnd = this.onEnd.bind(this)
 		this.onMove = this.onMove.bind(this)
 		this.onResize = debounce(this.onResize.bind(this), 50)
+		this.activeNextSlide = this.activeNextSlide.bind(this)
+		this.activePrevSlide = this.activePrevSlide.bind(this)
 	}
 
 	init() {
 		this.bindEvents()
 		this.addSlideEvents()
 		this.slidesConfig()
-		this.changeSlide(1)
+		this.changeSlide(0)
 		this.addResizeEvent()
 		return this
 	}
